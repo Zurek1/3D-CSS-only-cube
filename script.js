@@ -17,7 +17,7 @@ function Restore() {
 }
 
 function Monitor() {
-    let checkBox = document.getElementById('Destroy');
+    const checkBox = document.getElementById('Destroy');
     if (checkBox.checked == true) {
         Destroy();
     }
