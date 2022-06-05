@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 60px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    perspective: 2000px;
+    perspective-origin: 25px 25px;
+}
+
+.Scene {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: Speen 10s linear infinite;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 10vh;
+    float: left;
+}
+
+.Front, .Back, .Left, .Right, .Top, .Bottom {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    visibility: visible;
+}
+
+.Front, .Back, .Left, .Right {
+    background-image: url(dirtWithGrass.jpg);
+    background-size: cover;
+}
+
+.Top {
+    background-image: url(grass.jpg);
+    background-size: cover;
+}
+
+.Bottom {
+    background-image: url(dirt.jpg);
+    background-size: cover;
+}
+
+.Front {
+    transform: translateZ(1em);
+}
+
+.Back {
+    transform: translateZ(-1em);
+}
+
+.Top {
+    transform: translateY(-1em) rotateX(90deg);
+}
+
+.Bottom {
+    transform: translateY(1em) rotateX(90deg);
+}
+
+.Right {
+    transform: translateX(1em) rotateY(90deg);
+}
+
+.Left {
+    transform: translateX(-1em) rotateY(90deg);
+}
+
+.DestroyFront {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(dirtWithGrass.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyFront;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.DestroyBack {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(dirtWithGrass.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyBack;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.DestroyLeft {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(dirtWithGrass.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.DestroyRight {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(dirtWithGrass.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.DestroyTop {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(grass.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyTop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.DestroyBottom {
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    transform-style: preserve-3d;
+    background-image: url(dirt.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    display: block;
+    animation-name: DestroyBottom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes Speen {
+    to {transform: rotateY(360deg);}
+}
+
+@keyframes DestroyFront {
+    to {right: 500px; transform: rotateZ(360deg); visibility: hidden;}
+}
+
+@keyframes DestroyBack {
+    to {left: 500px; transform: rotateZ(360deg); visibility: hidden;}
+}
+
+@keyframes DestroyLeft {
+    to {Left: 500px; transform: rotateZ(360deg); visibility: hidden;}
+}
+
+@keyframes DestroyRight {
+    to {right: 500px; transform: rotateZ(360deg); visibility: hidden;};
+}
+
+@keyframes DestroyTop {
+    to {top: 500px; transform: rotateY(360deg); visibility: hidden;}
+}
+
+@keyframes DestroyBottom {
+    to {bottom: 500px; transform: rotateY(360deg); visibility: hidden;}
+}
+
+.Check {float: left; position: absolute; bottom: 100px; font-size: 10px;}
+.LabelText {color: white; font-size: 20px; font-family: 'Courier New', Courier, monospace; }
