@@ -1,3 +1,13 @@
+function Monitor() {
+    const checkBox = document.getElementById('Destroy');
+    if (checkBox.checked == true) {
+        Destroy();
+    }
+    else {
+        Restore();
+    }
+}
+
 function Destroy() {
     document.getElementById('front').className = 'DestroyFront';
     document.getElementById('back').className = 'DestroyBack';
@@ -14,14 +24,4 @@ function Restore() {
     document.getElementById('right').className = 'Right';
     document.getElementById('top').className = 'Top';
     document.getElementById('bottom').className = 'Bottom';
-}
-
-function Monitor() {
-    const checkBox = document.getElementById('Destroy');
-    if (checkBox.checked == true) {
-        Destroy();
-    }
-    else {
-        Restore();
-    }
 }
