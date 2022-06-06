@@ -1,3 +1,4 @@
+// Jakub Żmurkiewicz 3i
 function Monitor() {
     const checkBox = document.getElementById('Destroy');
     if (checkBox.checked == true) {
