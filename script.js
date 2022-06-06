@@ -16,6 +16,7 @@ function Destroy() {
     document.getElementById('right').className = 'DestroyRight';
     document.getElementById('top').className = 'DestroyTop';
     document.getElementById('bottom').className = 'DestroyBottom';
+    document.getElementById('text').className = 'DestroyText';
 }
 
 function Restore() {
@@ -25,4 +26,5 @@ function Restore() {
     document.getElementById('right').className = 'Right';
     document.getElementById('top').className = 'Top';
     document.getElementById('bottom').className = 'Bottom';
+    document.getElementById('text').className = 'Text';
 }
