@@ -206,4 +206,5 @@ body {
 }
 
 .Check {float: left; position: absolute; bottom: 100px; font-size: 10px;}
-.LabelText {color: white; font-size: 20px; font-family: 'Courier New', Courier, monospace; }
+.LabelText {color: white; font-size: 20px; font-family: 'Courier New', Courier, monospace;}
+.LabelText:hover {color: red;}
